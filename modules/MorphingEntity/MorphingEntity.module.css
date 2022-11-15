@@ -14,7 +14,8 @@
   );
   /*animation: morph 5s infinite;*/
   /*animation: both 1s;*/
-  transition: all 0.6s;
+  transition: all 1.5s;
+  transition-delay: 0.75s;
 }
 
 .morph path {

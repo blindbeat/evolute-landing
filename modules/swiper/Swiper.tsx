@@ -19,6 +19,7 @@ export const Swiper = ({ onActiveIndexChange }: Props) => {
     <BaseSwiper
       direction="vertical"
       modules={[Mousewheel]}
+      speed={1000}
       mousewheel
       className={styles.swiper}
       onActiveIndexChange={(e) => onActiveIndexChange(e.activeIndex)}
