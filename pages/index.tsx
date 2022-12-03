@@ -1,7 +1,13 @@
+import { Asteroids, Stars } from "modules"
 import { NextPage } from "next"
 
 const Home: NextPage = () => {
-  return <div></div>
+  return (
+    <>
+      <Stars />
+      <Asteroids />
+    </>
+  )
 }
 
 export default Home

@@ -1,0 +1,9 @@
+.star {
+  width: 10px;
+}
+
+@media (min-width: 48em) {
+  .star {
+    width: 20px;
+  }
+}

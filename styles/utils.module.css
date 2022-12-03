@@ -1,0 +1,8 @@
+.backgroundImage {
+  object-fit: cover;
+}
+
+.entity {
+  position: absolute;
+  z-index: 1;
+}
