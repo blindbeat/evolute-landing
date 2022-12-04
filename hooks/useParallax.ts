@@ -11,7 +11,7 @@ export const useParallax = ({ ref, distance }: Params) => {
     target: ref,
     offset: ["start end", "end start"],
   })
-  const rangeStep = 100
+  const rangeStep = 150
   const outputRange =
     distance >= 0 && distance <= 5 ? rangeStep * (5 - distance) : 0
   return useTransform(scrollYProgress, [0, 1], [outputRange, -outputRange])

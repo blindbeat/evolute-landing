@@ -8,6 +8,7 @@ import asteroid from "assets/entities/asteroid1.png"
 import { useParallax } from "hooks"
 import { useRef } from "react"
 import classNames from "classnames"
+import { Star } from "components/Star"
 
 interface AsteroidParam {
   style: MotionStyle
@@ -18,34 +19,95 @@ interface AsteroidParam {
 const asteroidPositions: AsteroidParam[] = [
   {
     style: {
-      left: "50%",
-      top: "75%",
-    },
-    rotation: 20,
-    duration: 10,
-  },
-  {
-    style: {
-      left: "80%",
-      top: "35%",
-    },
-    rotation: 40,
-    duration: 15,
-  },
-  {
-    style: {
       left: "10%",
-      top: "25%",
+      top: "45%",
     },
     rotation: 80,
-    duration: 20,
+    duration: 45,
+  },
+  {
+    style: {
+      left: "45%",
+      top: "85%",
+    },
+    rotation: 20,
+    duration: 30,
+  },
+  {
+    style: {
+      left: "70%",
+      top: "35%",
+    },
+    rotation: 200,
+    duration: 60,
+  },
+  {
+    style: {
+      left: "31%",
+      top: "65%",
+    },
+    rotation: 200,
+    duration: 60,
+  },
+]
+const starPositions: MotionStyle[] = [
+  {
+    left: "10%",
+    top: "4%",
+  },
+  {
+    left: "20%",
+    top: "25%",
+  },
+  {
+    left: "50%",
+    top: "8%",
+  },
+  {
+    left: "76%",
+    top: "45%",
+  },
+  {
+    left: "90%",
+    top: "5%",
+  },
+  {
+    left: "20%",
+    top: "65%",
+  },
+  {
+    left: "60%",
+    top: "85%",
+  },
+  {
+    left: "80%",
+    top: "75%",
+  },
+  {
+    left: "10%",
+    top: "95%",
+  },
+  {
+    left: "50%",
+    top: "48",
+  },
+  {
+    left: "54%",
+    top: "38%",
+  },
+  {
+    left: "28%",
+    top: "51%",
   },
 ]
 
 export const Asteroids = () => {
   const ref = useRef<HTMLDivElement | null>(null)
   const yClose = useParallax({ ref, distance: 0 })
-  const yFar = useParallax({ ref, distance: 3 })
+  const yMedium = useParallax({ ref, distance: 2 })
+  const yFar = useParallax({ ref, distance: 4 })
+
+  const ys = [yClose, yMedium, yFar]
   return (
     <Slide>
       <Image
@@ -59,7 +121,6 @@ export const Asteroids = () => {
           key={index}
           src={asteroid.src}
           alt="star"
-          // initial={false}
           animate={{ rotate: [rotation, 360 + rotation] }}
           transition={{
             repeat: Infinity,
@@ -69,7 +130,17 @@ export const Asteroids = () => {
           className={classNames(styles.asteroid, utilStyles.entity)}
           style={{
             ...style,
-            y: index % 2 ? yFar : yClose,
+            zIndex: 2,
+            y: ys[index % 3],
+          }}
+        />
+      ))}
+      {starPositions.map((style, index) => (
+        <Star
+          key={index}
+          style={{
+            ...style,
+            y: ys[index % 3],
           }}
         />
       ))}

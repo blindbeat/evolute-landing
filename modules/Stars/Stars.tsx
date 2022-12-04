@@ -1,13 +1,11 @@
 import { Slide } from "components/Slide"
 import Image from "next/image"
 import backgroundStars from "assets/backgrounds/backgroundStars.png"
-import star from "assets/entities/star.png"
-import styles from "./Stars.module.css"
 import utilStyles from "styles/utils.module.css"
-import { motion, MotionStyle } from "framer-motion"
+import { MotionStyle } from "framer-motion"
 import { useRef } from "react"
 import { useParallax } from "hooks"
-import classNames from "classnames"
+import { Star } from "components/Star"
 
 const starPositions: MotionStyle[] = [
   {
@@ -58,14 +56,12 @@ export const Stars = () => {
         className={utilStyles.backgroundImage}
       />
       {starPositions.map((style, index) => (
-        <motion.img
+        <Star
           key={index}
-          src={star.src}
-          alt="star"
-          className={classNames(styles.star, utilStyles.entity)}
           style={{
             ...style,
             y: index % 2 ? yFar : yClose,
+            zIndex: 1,
           }}
         />
       ))}
