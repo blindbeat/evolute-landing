@@ -60,7 +60,7 @@ const starPositions: MotionStyle[] = [
     top: "25%",
   },
   {
-    left: "50%",
+    left: "65%",
     top: "8%",
   },
   {
@@ -72,7 +72,7 @@ const starPositions: MotionStyle[] = [
     top: "5%",
   },
   {
-    left: "20%",
+    left: "40%",
     top: "65%",
   },
   {
@@ -98,6 +98,11 @@ const starPositions: MotionStyle[] = [
   {
     left: "28%",
     top: "51%",
+  },
+
+  {
+    left: "88%",
+    top: "91%",
   },
 ]
 
