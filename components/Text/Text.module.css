@@ -1,0 +1,15 @@
+.text {
+  color: antiquewhite;
+  margin: 1rem;
+  padding: 1rem;
+  background: black;
+  z-index: 10;
+  user-select: none;
+}
+
+@media (min-width: 48em) {
+  .text {
+    margin: 2rem;
+    font-size: 1.25rem;
+  }
+}

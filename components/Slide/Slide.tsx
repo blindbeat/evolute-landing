@@ -5,9 +5,9 @@ import classNames from "classnames"
 interface Props extends ComponentPropsWithoutRef<"div"> {}
 
 export const Slide = forwardRef<HTMLDivElement, Props>(
-  ({ children, className }, ref) => {
+  ({ children, className, ...rest }, ref) => {
     return (
-      <div ref={ref} className={classNames(styles.slide, className)}>
+      <div ref={ref} className={classNames(styles.slide, className)} {...rest}>
         {children}
       </div>
     )
