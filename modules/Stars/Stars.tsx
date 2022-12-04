@@ -7,7 +7,7 @@ import { motion, MotionStyle, Variants } from "framer-motion"
 import { useRef, useState } from "react"
 import { useParallax } from "hooks"
 import { Star } from "components/Star"
-import { Text } from "components/Text/Text"
+import { Text } from "components/Text"
 
 const starPositions: MotionStyle[] = [
   {
