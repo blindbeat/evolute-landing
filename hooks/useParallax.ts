@@ -1,5 +1,5 @@
-import { useScroll, useTransform } from "framer-motion"
-import { RefObject } from "react"
+import { useScroll, useTransform } from 'framer-motion'
+import { RefObject } from 'react'
 
 interface Params {
   ref: RefObject<HTMLElement>
@@ -9,7 +9,7 @@ interface Params {
 export const useParallax = ({ ref, distance }: Params) => {
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"],
+    offset: ['start end', 'end start'],
   })
   const rangeStep = 150
   const outputRange =

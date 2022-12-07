@@ -1,2 +1,2 @@
-export * from "./Stars"
-export * from "./Asteroids"
+export * from './Stars'
+export * from './Asteroids'

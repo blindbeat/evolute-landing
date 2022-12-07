@@ -1,52 +1,52 @@
-import { Slide } from "components/Slide"
-import Image from "next/image"
-import backgroundStars from "assets/backgrounds/backgroundStars.png"
-import styles from "./Stars.module.css"
-import utilStyles from "styles/utils.module.css"
-import { motion, MotionStyle, Variants } from "framer-motion"
-import { useRef, useState } from "react"
-import { useParallax } from "hooks"
-import { Star } from "components/Star"
-import { Text } from "components/Text"
+import { Slide } from 'components/Slide'
+import Image from 'next/image'
+import backgroundStars from 'assets/backgrounds/backgroundStars.png'
+import styles from './Stars.module.css'
+import utilStyles from 'styles/utils.module.css'
+import { motion, MotionStyle, Variants } from 'framer-motion'
+import { useRef, useState } from 'react'
+import { useParallax } from 'hooks'
+import { Star } from 'components/Star'
+import { Text } from 'components/Text'
 
 const starPositions: MotionStyle[] = [
   {
-    left: "10%",
-    top: "5%",
+    left: '10%',
+    top: '5%',
   },
   {
-    left: "30%",
-    top: "25%",
+    left: '30%',
+    top: '25%',
   },
   {
-    left: "50%",
-    top: "10%",
+    left: '50%',
+    top: '10%',
   },
   {
-    left: "80%",
-    top: "45%",
+    left: '80%',
+    top: '45%',
   },
   {
-    left: "90%",
-    top: "5%",
+    left: '90%',
+    top: '5%',
   },
   {
-    left: "20%",
-    top: "65%",
+    left: '20%',
+    top: '65%',
   },
   {
-    left: "60%",
-    top: "85%",
+    left: '60%',
+    top: '85%',
   },
   {
-    left: "80%",
-    top: "45%",
+    left: '80%',
+    top: '45%',
   },
 ]
 const textBlocks: string[] = [
-  "A long time ago in a galaxy far, far away…",
-  "Wait, there was even no galaxy and no time!",
-  "It all just started with the big bang: uncountable pieces of matter were scattered all over space. You will revive it and build new life forms, from stardust to highly developed humanoids.  Or it will be something else, who knows where this evolution leads… But it’s definitely going to be an outstanding experience when you’re passing a line of a series of games with self-made characters.",
+  'A long time ago in a galaxy far, far away…',
+  'Wait, there was even no galaxy and no time!',
+  'It all just started with the big bang: uncountable pieces of matter were scattered all over space. You will revive it and build new life forms, from stardust to highly developed humanoids.  Or it will be something else, who knows where this evolution leads… But it’s definitely going to be an outstanding experience when you’re passing a line of a series of games with self-made characters.',
 ]
 export const Stars = () => {
   const ref = useRef<HTMLDivElement | null>(null)
@@ -59,10 +59,10 @@ export const Stars = () => {
 
   const calcState = (index: number) => {
     const blockStateStep = step - index * 3
-    if (blockStateStep <= 0) return "hidden"
-    else if (blockStateStep === 1) return "visible"
-    else if (blockStateStep === 2) return "visibleChildren"
-    else return "visibleChildrenImmediately"
+    if (blockStateStep <= 0) return 'hidden'
+    else if (blockStateStep === 1) return 'visible'
+    else if (blockStateStep === 2) return 'visibleChildren'
+    else return 'visibleChildrenImmediately'
   }
 
   const letterVariants: Variants = {
@@ -88,7 +88,7 @@ export const Stars = () => {
   }
 
   const handleAnimationEnd = (animationName: string) => {
-    if (animationName === "visibleChildren") isLetterDrawing.current = false
+    if (animationName === 'visibleChildren') isLetterDrawing.current = false
   }
 
   const handleStep = () => {
@@ -145,7 +145,7 @@ export const Stars = () => {
             }}
             className={styles.text}
           >
-            {text.split("").map((letter, index) => (
+            {text.split('').map((letter, index) => (
               <motion.span
                 initial={{
                   opacity: 0,

@@ -1,1 +1,1 @@
-export * from "./randomizeInRange"
+export * from './randomizeInRange'

@@ -1,9 +1,9 @@
 .asteroid {
-  width: 90px;
+    width: 90px;
 }
 
 @media (min-width: 48em) {
-  .asteroid {
-    width: 150px;
-  }
+    .asteroid {
+        width: 150px;
+    }
 }

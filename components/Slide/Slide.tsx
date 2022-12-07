@@ -1,8 +1,8 @@
-import styles from "./Slide.module.css"
-import { ComponentPropsWithoutRef, forwardRef } from "react"
-import classNames from "classnames"
+import styles from './Slide.module.css'
+import { ComponentPropsWithoutRef, forwardRef } from 'react'
+import classNames from 'classnames'
 
-interface Props extends ComponentPropsWithoutRef<"div"> {}
+interface Props extends ComponentPropsWithoutRef<'div'> {}
 
 export const Slide = forwardRef<HTMLDivElement, Props>(
   ({ children, className, ...rest }, ref) => {
@@ -14,4 +14,4 @@ export const Slide = forwardRef<HTMLDivElement, Props>(
   }
 )
 
-Slide.displayName = "Slide"
+Slide.displayName = 'Slide'

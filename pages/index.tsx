@@ -1,11 +1,16 @@
-import { Asteroids, Stars } from "modules"
-import { NextPage } from "next"
+import { Asteroids, Stars } from 'modules'
+import { NextPage } from 'next'
+import { BigBang } from '../modules/BigBang'
+import { Slide } from 'components/Slide'
 
 const Home: NextPage = () => {
   return (
     <>
-      <Stars />
-      <Asteroids />
+      <BigBang />
+      <Slide />
+      <Slide />
+      {/*<Asteroids />*/}
+      {/*<Stars />*/}
     </>
   )
 }

@@ -1,9 +1,9 @@
-import "../styles/globals.css"
-import type { AppProps } from "next/app"
-import { useEffect } from "react"
-import localFont from "@next/font/local"
+import '../styles/globals.css'
+import type { AppProps } from 'next/app'
+import { useEffect } from 'react'
+import localFont from '@next/font/local'
 
-const retroFont = localFont({ src: "../assets/fonts/retroGaming.ttf" })
+const retroFont = localFont({ src: '../assets/fonts/retroGaming.ttf' })
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {

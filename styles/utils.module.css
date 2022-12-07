@@ -1,9 +1,9 @@
 .backgroundImage {
-  object-fit: cover;
-  z-index: -1;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .entity {
-  position: absolute;
-  z-index: 1;
+    position: absolute;
+    z-index: 1;
 }

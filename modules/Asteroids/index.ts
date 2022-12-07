@@ -1,1 +1,1 @@
-export * from "./Asteroids"
+export * from './Asteroids'
