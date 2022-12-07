@@ -17,7 +17,7 @@
     height: 720px;
     scale: 1.5;
     left: 50%;
-    transform: translate(-34%, 16%);
+    transform: translate(-32.5%, 16%);
     z-index: 10;
 }
 .background.show {
